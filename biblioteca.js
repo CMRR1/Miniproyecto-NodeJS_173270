@@ -5,6 +5,7 @@ var elemento=[];
 
 function ingresaPrincinpio(element){
 elemento.unshift(element);
+return elemento;
 }
 
 function ingresaFinal(element){
@@ -47,5 +48,9 @@ console.log("La suma es: "+total);
 console.log("El promedio es: "+total/elemento.length);
 }
 
+module.exports = {
+
+    ingresaPrincinpio
+ }
 
 
