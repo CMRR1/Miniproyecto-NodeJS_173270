@@ -10,30 +10,37 @@ return elemento;
 
 function ingresaFinal(element){
 elemento.push(element);
+return elemento;
 }
 
 function eliminaUltimo(){
 elemento.pop();
+return elemento;
 }
 
 function eliminaPrimero(){
 elemento.shift();
+return elemento;
 }
 
 function eliminaDentro(index){
 elemento.slice(index, 1);
+return elemento;
 }
 
 function edita(index, element){
 elemento[index]=element;
+return elemento;
 }
 
 function imprimirIndice(index){
 console.log(elemento[index]);
+return elemento;
 }
 
 function imprimirTodo(){
 console.log(elemento);
+return elemento;
 }
 
 function imprimirSumaPromedio(){
@@ -44,13 +51,23 @@ elemento.forEach(suma=>{
 total+=suma
 });
 
-console.log("La suma es: "+total);
-console.log("El promedio es: "+total/elemento.length);
+return{
+    suma:total,
+    promedio:(total/elemento.length)
+}; 
 }
 
 module.exports = {
 
-    ingresaPrincinpio
+    ingresaPrincinpio,
+    ingresaFinal,
+    eliminaPrimero,
+    eliminaUltimo,
+    eliminaDentro,
+    edita,
+    imprimirIndice,
+    imprimirSumaPromedio,
+    imprimirTodo
  }
 
 
